@@ -1,0 +1,113 @@
+<%- include('partials/header') %>
+
+<body>
+    <div class="container">
+        <div class="weather-current-wrapper">
+            <div class="weather-current">
+                <div class="current-top">
+                    <div class="current-time">
+                        <% var today = new Date(); %>
+                        <% if (today.getMinutes() < 10) { %>
+                            <% var time = today.getHours() + ": 0" + today.getMinutes(); %>
+                        <% } else { %>
+                            <% var time = today.getHours() + ":" + today.getMinutes(); %>
+                        <% } %>
+                        <h6><%= time %></h6>
+                    </div>
+                    <div class="current-date">
+                        <h6>Tuesday</h6>
+                        <% var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear(); %>
+                        <%= date %>
+                    </div>
+                    <div class="current-desc">
+                        <h4><%= weather["currently"].summary %></h4>
+                    </div>
+                </div>
+                <div class="current-bottom">
+                    <div class="current-temp">
+                       <h1> <%= Math.round(weather["currently"].temperature) %><span id="unit"> °C</span></h1> 
+                    </div>
+                    <div class="current-location">
+                        <h6>Toronto, Ontario</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fiveDay-wrapper">
+                <div class="fiveDay-forecasts">
+                    <div class="day">
+                        <h6>Sunny</h6>
+                        <div class="day-temp">
+                            <h1>32<span id="unit"> °C</span></h1>
+                            <div class="single-day">
+                                <h6>Wednesday</h6>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="day">
+                        <h6>Mostly cloudy</h6>
+                        <div class="day-temp">
+                            <h1>16<span id="unit"> °C</span></h1>
+                            <div class="single-day">
+                                <h6>Thursday</h6>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="day">
+                        <h6>Raining</h6>
+                        <div class="day-temp">
+                            <h1>22<span id="unit"> °C</span></h1>
+                            <div class="single-day">
+                                <h6>Friday</h6>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="day">
+                        <h6>Sunny</h6>
+                        <div class="day-temp">
+                            <h1>25<span id="unit"> °C</span></h1>
+                            <div class="single-day">
+                                <h6>Saturday</h6>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="day">
+                        <h6>Raining</h6>
+                        <div class="day-temp">
+                            <h1>30<span id="unit"> °C</span></h1>
+                            <div class="single-day">
+                                <h6>Sunday</h6>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="day">
+                        <h6>Heavy clouds</h6>
+                        <div class="day-temp">
+                            <h1>18<span id="unit"> °C</span></h1>
+                            <div class="single-day">
+                                <h6>Monday</h6>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+<%- include('partials/header') %>

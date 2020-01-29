@@ -1,7 +1,5 @@
 const express = require('express'),
     request = require('request'),
-    fs = require('fs'),
-    path = require('path'),
     app = express(),
     HTTP_PORT = process.env.PORT || 8080;
 
@@ -34,7 +32,6 @@ app.get('/', (req, res) => {
     //         console.log(err);
     //     }
     // })
-
     res.render('index');
 })
 
