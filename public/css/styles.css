@@ -21,7 +21,7 @@ body {
     background-size: cover;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
-    overflow:  hidden;
+    overflow: hidden;
 }
 
 .weather-wrapper {
@@ -103,9 +103,9 @@ body {
     font-size: 0.8em;
 }
 
-#fiveDay-forecasts {
+.fiveDay-forecasts {
     /* border: 1px solid red; */
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
 }
@@ -114,7 +114,8 @@ body {
     /* border: 1px solid red; */
     margin-bottom: 3.0%;
     width: 100%;
-  transition: font-size 0.2s; /* For Safari 3.1 to 6.0 */
+    transition: font-size 0.2s;
+    /* For Safari 3.1 to 6.0 */
 }
 
 .day:hover {
@@ -147,13 +148,20 @@ body {
         width: 100%;
         height: 100%;
     }
-}
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-    
-    .container {
-        font-size: 15px;
+    .weather-current {
+        font-size: 1.5em;
+        width: 55%;
+    }
 
+    .fiveDay-wrapper {
+        font-size: 1.25em;
+        width: 45%;
     }
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .container {
+        font-size: 11.5px;
+    }
+}

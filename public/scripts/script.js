@@ -1,7 +1,6 @@
-var weatherWrap = document.querySelector('.fiveDay-wrapper');
-var forecasts = document.querySelector('#fiveDay-forecasts');
+const container = document.querySelector('.container');
+const fiveDay = document.querySelector('.fiveDay-forecasts');
 
-weatherWrap.addEventListener('load', function() {
-    forecasts.classList.add('animated slideInLeft');
-
+container.addEventListener('animationend', function() {
+    fiveDay.style.display = 'flex';
 })
